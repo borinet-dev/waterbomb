@@ -4,13 +4,8 @@
 <head>
 	<script>
 		(function() {
-			// 사용자 에이전트 정보를 가져옵니다.
 			var userAgent = navigator.userAgent.toLowerCase();
-
-			// 브라우저가 크롬인지 확인합니다.
 			var isChrome = /chrome/.test(userAgent) && !/edge|edg|opr/.test(userAgent);
-
-			// 크롬이 아니라면 팝업 창을 띄웁니다.
 			if (!isChrome) {
 				alert('이 페이지는 크롬에 최적화되어 있습니다. 크롬 브라우저에서 접속해 주세요.');
 			}
@@ -37,120 +32,110 @@
 	</style>
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta content="" name="keywords">
-	<meta content="" name="description">
+	<meta content="거대 황금 돼지 이벤트" name="keywords">
+	<meta content="리버티 거대 황금 돼지 이벤트 안내" name="description">
 
-    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">  
-
-    <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
     <link href="https://borinet-dev.github.io/css/lib/animate/animate.min.css" rel="stylesheet">
     <link href="https://borinet-dev.github.io/css/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="https://borinet-dev.github.io/css/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
     <link href="https://borinet-dev.github.io/css/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
 	<link href="https://borinet-dev.github.io/css/css/board.css" rel="stylesheet">
 	<link href="https://borinet-dev.github.io/css/css/style2.css" rel="stylesheet">
 	<link href="https://borinet-dev.github.io/css/css/style3.css" rel="stylesheet">
 </head>
 
-<body style="background-color: #2a2a2a;">
-    <!-- Spinner Start -->
+<body style="background-color:#2a2a2a;">
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+        <div class="spinner-border text-primary" role="status" style="width:3rem;height:3rem;"></div>
     </div>
-    <!-- Spinner End -->
 
-    <!-- Navbar Start -->
-		<!-- Header (외부 include) -->
-		<div id="header-placeholder"></div>
+	<div id="header-placeholder"></div>
+	<script>
+	(function(){
+	  const url = "https://borinet-dev.github.io/head/header.html?ver=" + Date.now();
+	  fetch(url).then(r=>r.text()).then(html=>{
+		const holder = document.getElementById('header-placeholder');
+		holder.outerHTML = html;
+		const temp = document.createElement("div");
+		temp.innerHTML = html;
+		const fav = temp.querySelector('link[rel="navi-favicon"]');
+		if (fav){
+		  let headIcon = document.head.querySelector("link[rel~='icon']");
+		  if(!headIcon){
+			headIcon=document.createElement('link');
+			headIcon.rel='icon';
+			document.head.appendChild(headIcon);
+		  }
+		  headIcon.href = fav.getAttribute('href');
+		}
+		const titleMeta = temp.querySelector('meta[name="web-title"]');
+		if (titleMeta) document.title = titleMeta.content;
+	  }).catch(console.error);
+	})();
+	</script>
 
-		<script>
-		(function(){
-		  const url = "https://borinet-dev.github.io/head/header.html?ver=" + Date.now();
-		  fetch(url).then(r=>r.text()).then(html=>{
-			const holder = document.getElementById('header-placeholder');
-			// wrapper <div>를 nav로 교체 → sticky-top 정상 동작
-			holder.outerHTML = html;
-
-			// favicon/제목 반영
-			const temp = document.createElement("div");
-			temp.innerHTML = html;
-
-			const fav = temp.querySelector('link[rel="navi-favicon"]');
-			if (fav){
-			  let headIcon = document.head.querySelector("link[rel~='icon']");
-			  if(!headIcon){
-				headIcon=document.createElement('link');
-				headIcon.rel='icon';
-				document.head.appendChild(headIcon);
-			  }
-			  headIcon.href = fav.getAttribute('href');
-			}
-
-			const titleMeta = temp.querySelector('meta[name="web-title"]');
-			if (titleMeta) document.title = titleMeta.content;
-		  }).catch(console.error);
-		})();
-		</script>
-	<!-- Navbar End -->
-
-
-    <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center py-5">
             <h1 class="display-3 text-white mb-4 animated slideInDown s2">더위야 물렀거라! 시원하게 워터 밤! 이벤트</h1>
         </div>
     </div>
-    <!-- Page Header End -->
 
+	<div id="viewer">
+		<div class="bd" style="background-color:#2a2a2a;color:white;width:1067px !important;max-width:none !important;display:block;box-sizing:border-box;margin:0 auto;flex:0 0 auto;flex-shrink:0;">
+			<div id="pc-content" class="section primary-section" style="display:block;">
+				
+<div style="max-width:900px;margin:0 auto;padding:28px 18px;background:#101722;color:#e8edf5;font-family:'Malgun Gothic','맑은 고딕',Arial,sans-serif;line-height:1.75;border-radius:14px;box-sizing:border-box;">
+<div style="max-width:760px;margin:0 auto;padding:16px 12px;color:#e8edf5;font-family:'Malgun Gothic','맑은 고딕',Arial,sans-serif;line-height:1.62;white-space:normal !important;overflow:hidden;border-radius:14px;box-sizing:border-box;">
+<div style="text-align:center;margin:0 0 18px 0;padding:14px 12px;background:#151c28;border:1px solid #2d384c;border-radius:12px;box-sizing:border-box;white-space:normal !important;">
+<div style="font-size:27px;font-weight:900;color:#FFD966;text-shadow:2px 2px 2px #000;margin-bottom:10px;"> 더위야 물렀거라! 시원하게 워터 밤! </div>
+<div style="font-size:16px;color:#dce3ef;"> 이벤트 기간 동안 능력치가 폭발적으로 증가하는 시원한 물폭탄과 함께 무더위를 날려 보세요. </div>
+</div>
+<div style="background:#201b2d;border:1px solid #5d3c86;border-radius:12px;padding:22px;margin-bottom:24px;box-sizing:border-box;white-space:normal !important;">
+<div style="font-size:22px;font-weight:900;color:#FFD966;margin-bottom:12px;"> 이벤트 기간 </div>
+<div style="font-size:16px;color:#e8edf5;">
+<b style="color:#80C0FF;">7월 1일 오전 07시</b>부터 <b style="color:#80C0FF;">9월 30일 자정</b>까지 진행됩니다. </div>
+</div>
 
-    <!-- Start -->
-<div id="viewer" class="white viewer_style rd_nav_blk">
-	<div style="background-color: #2a2a2a; color: white; id="bd_7139_123793" class="bd clear   hover_effect" data-default_style="viewer" data-bdfilestype="" data-bdnavside="N" style="max-width:px">
-	<article>
+<div style="background:#151c28;border:1px solid #2d384c;border-radius:12px;padding:22px;margin-bottom:24px;box-sizing:border-box;white-space:normal !important;">
+<div style="font-size:22px;font-weight:900;color:#C080FF;margin-bottom:12px;"> 이벤트 참여 방법 </div>
+<div style="font-size:15px;color:#dce3ef;margin-bottom:1px;"> 이벤트 기간 동안 게임에 접속하면 <b style="color:#FFD966;">더위야 물렀거라</b> 버프가 자동 적용됩니다.<br> 일반 몬스터 처치 시 확률적으로 <b style="color:#80C0FF;">워터 밤!</b> 스킬이 발동됩니다. </div>
+</div>
 
-<div style="box-sizing: border-box; color: rgb(31, 31, 31); font-family: -apple-system, BlinkMacSystemFont, Roboto, &quot;맑은 고딕&quot;, &quot;Malgun Gothic&quot;, &quot;Microsoft JhengHei&quot;, meiryo, &quot;MS PGothic&quot;, 돋움, Dotum, sans-serif; font-size: 15px;"><span style="color: rgb(51, 102, 153);"><img src="https://raw.githubusercontent.com/borinet-dev/newyear/main/main_1.png" alt="main.png" width="650" editor_component="image_link" />
-<br /></span></div>
-<p><br /></p>
-<p style="line-height: 25px; font-family: sans-serif; letter-spacing: -1px; font-size: 20px; font-weight: bold; color: rgb(255, 177, 26); text-shadow: midnightblue 1px 1px 1.2px; border-bottom: 3px solid rgb(255, 177, 26);">이벤트 기간: 9월 1일(월) 07시&nbsp;~ 9월 15일(월) 06시 까지</p>
-<br>
-* 해당 이벤트는 리니지2 이벤트를 참고하여 만들었습니다.<br>
-<a href="https://lineage2.plaync.com/board/l2awknnotice/view?articleId=687dea5447138d3ef94b6ea3" target="_blank"><font color=skyblue>https://lineage2.plaync.com/board/l2awknnotice/view?articleId=67b2e32f19fc807b79d47074</font></a><br><br><br>
-<p><font color=white size=3>이벤트 기간동안 능력치가 폭발적으로 증가하는 시원한 물폭탄과 함께 무더위를 날리세요!</font></p>
-<br>
-
-<img src="https://borinet-dev.github.io/waterbomb/event.png" width="650" editor_component="image_link" /><br><br>
-	<div class="document_123793_4 xe_content">
-	  <p><font color=white>1. 게임 접속 시 ‘더위야 물렀거라’ 버프가 자동적으로 적용됩니다.</font></p>
-    <table style="color:white; border:1px solid white; border-collapse:collapse;">
-      <tr><th style="color:white; border:1px solid white;"><center>버프명</th><th style="color:white; border:1px solid white;"><center>효과</th></tr>
-      <tr><td style="color:white; border:1px solid white;"><center><img src="https://borinet-dev.github.io/waterbomb/BegoneHeat.png"><br>더위야 물렀거라</td><td style="color:white; border:1px solid white;"><center>일반 몬스터 처치 시 확률적으로 ‘워터 밤!’ 스킬 적용</td></tr>
-    </table>
-<br><br>
-	  <p><font color=white>2. ‘워터 밤!’ 스킬이 적용되면 10초 동안 능력치가 증가하고, 공격 시 확률적으로 시원한 물폭탄 이펙트가 적용됩니다.</p>
-	  <table style="color:white; border:1px solid white; border-collapse:collapse;">
-	    <tr><th style="color:white; border:1px solid white;"><center>스킬명</th><th style="color:white; border:1px solid white;"><center>효과</th></tr>
-	    <tr><td style="color:white; border:1px solid white;"><center><img src="https://borinet-dev.github.io/waterbomb/Waterbomb.png"><br>워터 밤!</td><td style="color:white; border:1px solid white;"><center>10초 동안<br>물리/마법 명중이 100,<br>모든 크리티컬 확률이 30%,<br>모든 위력이 30% 증가</td></tr>
-	  </table>
-
-
+<div style="background:#151c28;border:1px solid #2d384c;border-radius:12px;padding:22px;margin-bottom:24px;box-sizing:border-box;white-space:normal !important;">
+<center><img src="https://borinet-dev.github.io/waterbomb/event.png" style="max-width:650px;width:100%;border-radius:14px;border:1px solid #3a465a;box-sizing:border-box;white-space:normal !important;"></center><br>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;">
+<div style="background:#1a2230;border:1px solid #35435a;border-radius:10px;padding:16px;box-sizing:border-box;white-space:normal !important;text-align:center;">
+<img src="https://borinet-dev.github.io/waterbomb/BegoneHeat.png" style="width:64px;height:64px;margin-bottom:8px;">
+<div style="font-size:18px;font-weight:900;color:#FFD966;margin-bottom:10px;">더위야 물렀거라</div>
+<div style="font-size:15px;color:#dce3ef;text-align:left;"> ㆍ게임 접속 시 자동 적용됩니다.<br> ㆍ일반 몬스터 처치 시 확률적으로 <b style="color:#80C0FF;">워터 밤!</b> 스킬이 적용됩니다. </div>
+</div>
+<div style="background:#1a2230;border:1px solid #35435a;border-radius:10px;padding:16px;box-sizing:border-box;white-space:normal !important;text-align:center;">
+<img src="https://borinet-dev.github.io/waterbomb/Waterbomb.png" style="width:64px;height:64px;margin-bottom:8px;">
+<div style="font-size:18px;font-weight:900;color:#FFD966;margin-bottom:10px;">워터 밤!</div>
+<div style="font-size:15px;color:#dce3ef;text-align:left;"> ㆍ10초 동안 물리/마법 명중이 10 증가합니다.<br> ㆍ모든 크리티컬 확률이 10% 증가합니다.<br> ㆍ모든 위력이 10% 증가합니다.<br> ㆍ공격 시 확률적으로 시원한 물폭탄 이펙트가 적용됩니다. </div>
 </div>
 </div>
-</div></div><br><br>
-   <!-- End -->
-        
+</div>
+<div style="background:#241b22;border:1px solid #7a3c46;border-radius:12px;padding:22px;margin-bottom:24px;box-sizing:border-box;white-space:normal !important;">
+<div style="font-size:21px;font-weight:900;color:#FF8888;margin-bottom:12px;"> 주의사항 </div>
+<div style="font-size:15px;color:#e8edf5;"> ㆍ이벤트 버프 및 워터 밤 효과는 이벤트 기간에만 적용됩니다.<br> ㆍ워터 밤 스킬은 일반 몬스터 처치 시 확률적으로 적용됩니다.<br> ㆍ이벤트 진행 기간과 세부 효과는 운영 상황에 따라 조정될 수 있습니다. </div>
+</div>
 
-    <!-- Copyright Start -->
+<div style="text-align:center;background:#151c28;border:1px solid #2d384c;border-radius:12px;padding:22px;box-sizing:border-box;white-space:normal !important;">
+<div style="font-size:21px;font-weight:900;color:#FFD966;margin-bottom:8px;"> 시원한 워터 밤과 함께 더위를 날려 보세요! </div>
+<div style="font-size:15px;color:#dce3ef;"> 이벤트 기간 동안 사냥을 통해 강력한 효과를 체험해 보시기 바랍니다. </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+	<br><br>
+
 	<div id="footer-placeholder"></div>
 	<script>
 	  fetch("https://borinet-dev.github.io/head/footer.html?ver=" + Date.now())
@@ -159,14 +144,9 @@
 	      document.getElementById("footer-placeholder").innerHTML = html;
 	    });
 	</script>
-    <!-- Copyright End -->
 
-
-    <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-
-    <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="https://borinet-dev.github.io/css/lib/wow/wow.min.js"></script>
@@ -177,10 +157,6 @@
 	<script src="https://borinet-dev.github.io/css/lib/parallax/parallax.min.js"></script>
 	<script src="https://borinet-dev.github.io/css/lib/isotope/isotope.pkgd.min.js"></script>
 	<script src="https://borinet-dev.github.io/css/lib/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="https://borinet-dev.github.io/css/js/main.js"></script>
-    </body>
+	<script src="https://borinet-dev.github.io/css/js/main.js"></script>
+</body>
 </html>
-
-
